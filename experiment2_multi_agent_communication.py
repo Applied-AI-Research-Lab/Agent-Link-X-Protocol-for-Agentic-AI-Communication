@@ -181,9 +181,9 @@ Use SI units. Include the gravitational constant G = 6.67430e-11."""
         )
         self.conversation_log.append(msg1)
         if msg1["success"]:
-            print(f"  ✓ Tokens: {msg1['total_tokens']}, Latency: {msg1['latency']}s")
+            print(f"Tokens: {msg1['total_tokens']}, Latency: {msg1['latency']}s")
         else:
-            print(f"  ✗ Error: {msg1.get('error', 'Unknown')}")
+            print(f"Error: {msg1.get('error', 'Unknown')}")
             return self._generate_error_result("Message 1 failed")
         
         time.sleep(0.5)
@@ -204,9 +204,9 @@ Use SI units. Include the gravitational constant G = 6.67430e-11."""
         )
         self.conversation_log.append(msg2)
         if msg2["success"]:
-            print(f"  ✓ Tokens: {msg2['total_tokens']}, Latency: {msg2['latency']}s")
+            print(f"Tokens: {msg2['total_tokens']}, Latency: {msg2['latency']}s")
         else:
-            print(f"  ✗ Error: {msg2.get('error', 'Unknown')}")
+            print(f"Error: {msg2.get('error', 'Unknown')}")
         
         time.sleep(0.5)
         
@@ -219,9 +219,9 @@ Use SI units. Include the gravitational constant G = 6.67430e-11."""
         )
         self.conversation_log.append(msg3)
         if msg3["success"]:
-            print(f"  ✓ Tokens: {msg3['total_tokens']}, Latency: {msg3['latency']}s")
+            print(f"Tokens: {msg3['total_tokens']}, Latency: {msg3['latency']}s")
         else:
-            print(f"  ✗ Error: {msg3.get('error', 'Unknown')}")
+            print(f"Error: {msg3.get('error', 'Unknown')}")
         
         time.sleep(0.5)
         
@@ -240,9 +240,9 @@ Use SI units. Include the gravitational constant G = 6.67430e-11."""
         )
         self.conversation_log.append(msg4)
         if msg4["success"]:
-            print(f"  ✓ Tokens: {msg4['total_tokens']}, Latency: {msg4['latency']}s")
+            print(f"Tokens: {msg4['total_tokens']}, Latency: {msg4['latency']}s")
         else:
-            print(f"  ✗ Error: {msg4.get('error', 'Unknown')}")
+            print(f"Error: {msg4.get('error', 'Unknown')}")
         
         time.sleep(0.5)
         
@@ -255,9 +255,9 @@ Use SI units. Include the gravitational constant G = 6.67430e-11."""
         )
         self.conversation_log.append(msg5)
         if msg5["success"]:
-            print(f"  ✓ Tokens: {msg5['total_tokens']}, Latency: {msg5['latency']}s")
+            print(f"Tokens: {msg5['total_tokens']}, Latency: {msg5['latency']}s")
         else:
-            print(f"  ✗ Error: {msg5.get('error', 'Unknown')}")
+            print(f"Error: {msg5.get('error', 'Unknown')}")
         
         time.sleep(0.5)
         
@@ -276,9 +276,9 @@ Use SI units. Include the gravitational constant G = 6.67430e-11."""
         )
         self.conversation_log.append(msg6)
         if msg6["success"]:
-            print(f"  ✓ Tokens: {msg6['total_tokens']}, Latency: {msg6['latency']}s")
+            print(f"Tokens: {msg6['total_tokens']}, Latency: {msg6['latency']}s")
         else:
-            print(f"  ✗ Error: {msg6.get('error', 'Unknown')}")
+            print(f"Error: {msg6.get('error', 'Unknown')}")
         
         time.sleep(0.5)
         
@@ -291,9 +291,9 @@ Use SI units. Include the gravitational constant G = 6.67430e-11."""
         )
         self.conversation_log.append(msg7)
         if msg7["success"]:
-            print(f"  ✓ Tokens: {msg7['total_tokens']}, Latency: {msg7['latency']}s")
+            print(f"Tokens: {msg7['total_tokens']}, Latency: {msg7['latency']}s")
         else:
-            print(f"  ✗ Error: {msg7.get('error', 'Unknown')}")
+            print(f"Error: {msg7.get('error', 'Unknown')}")
         
         time.sleep(0.5)
         
@@ -319,9 +319,9 @@ Use SI units. Include the gravitational constant G = 6.67430e-11."""
         )
         self.conversation_log.append(msg8)
         if msg8["success"]:
-            print(f"  ✓ Tokens: {msg8['total_tokens']}, Latency: {msg8['latency']}s")
+            print(f"Tokens: {msg8['total_tokens']}, Latency: {msg8['latency']}s")
         else:
-            print(f"  ✗ Error: {msg8.get('error', 'Unknown')}")
+            print(f"Error: {msg8.get('error', 'Unknown')}")
         
         # Generate results
         return self._generate_result()
@@ -382,12 +382,12 @@ def run_experiment_2(api_key: str, output_dir: str = "results"):
         all_results.append(result)
         
         if result.get("success", False):
-            print(f"\n✓ Task completed successfully")
-            print(f"  Total tokens: {result['total_tokens']}")
-            print(f"  Total latency: {result['total_latency']:.2f}s")
-            print(f"  Total messages: {result['total_messages']}")
+            print(f"\n Task completed successfully")
+            print(f"Total tokens: {result['total_tokens']}")
+            print(f"Total latency: {result['total_latency']:.2f}s")
+            print(f"Total messages: {result['total_messages']}")
         else:
-            print(f"\n✗ Task failed: {result.get('error', 'Unknown error')}")
+            print(f"\nTask failed: {result.get('error', 'Unknown error')}")
         
         # Delay between encoding tests
         time.sleep(2)
@@ -434,8 +434,8 @@ def run_experiment_2(api_key: str, output_dir: str = "results"):
     # Calculate efficiency gains
     if baseline_tokens and baseline_latency:
         print(f"\nBaseline (Natural Language):")
-        print(f"  Total tokens: {baseline_tokens}")
-        print(f"  Total latency: {baseline_latency:.3f}s")
+        print(f"Total tokens: {baseline_tokens}")
+        print(f"Total latency: {baseline_latency:.3f}s")
         
         print(f"\nEfficiency Comparison:")
         for enc, data in summary["encoding_comparison"].items():
@@ -450,8 +450,8 @@ def run_experiment_2(api_key: str, output_dir: str = "results"):
                 data["latency_change_pct"] = round(latency_change, 1)
                 
                 print(f"\n{enc}:")
-                print(f"  Total tokens: {tokens} ({token_change:+.1f}%)")
-                print(f"  Total latency: {latency:.3f}s ({latency_change:+.1f}%)")
+                print(f"Total tokens: {tokens} ({token_change:+.1f}%)")
+                print(f"Total latency: {latency:.3f}s ({latency_change:+.1f}%)")
     
     # Save Results
     
@@ -459,13 +459,13 @@ def run_experiment_2(api_key: str, output_dir: str = "results"):
     detailed_file = os.path.join(output_dir, f"experiment2_detailed_{timestamp}.json")
     with open(detailed_file, "w") as f:
         json.dump(all_results, f, indent=2)
-    print(f"\n✓ Detailed results saved to: {detailed_file}")
+    print(f"\n Detailed results saved to: {detailed_file}")
     
     # Save summary
     summary_file = os.path.join(output_dir, f"experiment2_summary_{timestamp}.json")
     with open(summary_file, "w") as f:
         json.dump(summary, f, indent=2)
-    print(f"✓ Summary saved to: {summary_file}")
+    print(f" Summary saved to: {summary_file}")
     
     # Generate LaTeX table
     latex_file = os.path.join(output_dir, f"experiment2_table_{timestamp}.tex")
@@ -496,7 +496,7 @@ def run_experiment_2(api_key: str, output_dir: str = "results"):
         f.write("\\label{tab:exp2_results}\n")
         f.write("\\end{table}\n")
     
-    print(f"✓ LaTeX table saved to: {latex_file}")
+    print(f" LaTeX table saved to: {latex_file}")
     
     print(f"\n{'='*70}")
     print("Analysis Complete")

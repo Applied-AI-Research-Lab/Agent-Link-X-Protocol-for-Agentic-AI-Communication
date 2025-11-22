@@ -19,7 +19,7 @@ load_dotenv()
 
 # Configuration
 API_KEY = os.getenv("OPENAI_API_KEY", "your-api-key-here")
-MODEL = "gpt-4o-mini"
+MODEL = "gpt-4o-mini" # or any other supported model
 TOKENIZER_NAME = "gpt2"
 
 # Encoding Utilities
@@ -170,12 +170,12 @@ def run_experiment_1(input_texts, api_key, output_dir="results"):
             api_result = measure_llm_response(client, encoded_message, enc_type, MODEL)
             
             if api_result["success"]:
-                print(f"✓ Success")
+                print(f"Success")
                 print(f"  Latency: {api_result['latency_seconds']:.3f}s")
                 print(f"  Input tokens: {api_result['input_tokens']}")
                 print(f"  Total tokens: {api_result['total_tokens']}")
             else:
-                print(f"✗ Error: {api_result['error']}")
+                print(f"Error: {api_result['error']}")
             
             # Combine results
             message_results["encodings"][enc_type] = {
@@ -257,13 +257,13 @@ def run_experiment_1(input_texts, api_key, output_dir="results"):
     detailed_file = os.path.join(output_dir, f"experiment1_detailed_{timestamp}.json")
     with open(detailed_file, "w") as f:
         json.dump(all_results, f, indent=2)
-    print(f"\n✓ Detailed results saved to: {detailed_file}")
+    print(f"\nDetailed results saved to: {detailed_file}")
     
     # Save summary
     summary_file = os.path.join(output_dir, f"experiment1_summary_{timestamp}.json")
     with open(summary_file, "w") as f:
         json.dump(summary, f, indent=2)
-    print(f"✓ Summary saved to: {summary_file}")
+    print(f"Summary saved to: {summary_file}")
     
     # Generate LaTeX table
     latex_file = os.path.join(output_dir, f"experiment1_table_{timestamp}.tex")
@@ -294,7 +294,7 @@ def run_experiment_1(input_texts, api_key, output_dir="results"):
         f.write("\\label{tab:exp1_results}\n")
         f.write("\\end{table}\n")
     
-    print(f"✓ LaTeX table saved to: {latex_file}")
+    print(f"LaTeX table saved to: {latex_file}")
     
     print(f"\n{'='*70}")
     print("Analysis Complete")

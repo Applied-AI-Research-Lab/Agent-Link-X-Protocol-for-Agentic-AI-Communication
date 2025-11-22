@@ -126,12 +126,12 @@ def analyze_language_tokenization(language: str, text: str, tokenizer) -> Dict:
                 "success": True
             }
             
-            print(f"    Token count: {token_count}")
-            print(f"    Chars/token: {chars_per_token:.2f}")
-            print(f"    Encoding overhead: {encoding_overhead:.2f}x")
+            print(f"Token count: {token_count}")
+            print(f"Chars/token: {chars_per_token:.2f}")
+            print(f"Encoding overhead: {encoding_overhead:.2f}x")
             
         except Exception as e:
-            print(f"    ✗ Error: {e}")
+            print(f"Error: {e}")
             results["encodings"][enc_name] = {
                 "success": False,
                 "error": str(e)
@@ -152,9 +152,9 @@ def run_experiment_3(output_dir="results"):
     print(f"\nLoading tokenizer: {TOKENIZER_NAME}...")
     try:
         tokenizer = AutoTokenizer.from_pretrained(TOKENIZER_NAME)
-        print("✓ Tokenizer loaded successfully")
+        print("Tokenizer loaded successfully")
     except Exception as e:
-        print(f"✗ Error loading tokenizer: {e}")
+        print(f"Error loading tokenizer: {e}")
         return None
     
     # Analyze each language
@@ -219,12 +219,12 @@ def run_experiment_3(output_dir="results"):
                 }
                 
                 print(f"\n  {lang.upper()}:")
-                print(f"    Tokens: {tokens}")
-                print(f"    Chars/token: {chars_per_token:.2f}")
-                print(f"    Overhead vs English: {overhead_factor:.2f}x")
+                print(f"Tokens: {tokens}")
+                print(f"Chars/token: {chars_per_token:.2f}")
+                print(f"Overhead vs English: {overhead_factor:.2f}x")
                 
                 # Calculate efficiency gains from machine-native encoding
-                print(f"    Efficiency gains with encodings:")
+                print(f"Efficiency gains with encodings:")
                 for enc_name in ["binary", "base64", "compressed_base64"]:
                     enc_data = result["encodings"].get(enc_name, {})
                     if enc_data.get("success", False):
@@ -236,7 +236,7 @@ def run_experiment_3(output_dir="results"):
                             "reduction_vs_nl": round(reduction_pct, 1)
                         }
                         
-                        print(f"      {enc_name}: {enc_tokens} tokens ({reduction_pct:+.1f}%)")
+                        print(f"  {enc_name}: {enc_tokens} tokens ({reduction_pct:+.1f}%)")
     
     # Save Results
     
@@ -244,13 +244,13 @@ def run_experiment_3(output_dir="results"):
     detailed_file = os.path.join(output_dir, f"experiment3_detailed_{timestamp}.json")
     with open(detailed_file, "w", encoding='utf-8') as f:
         json.dump(all_results, f, indent=2, ensure_ascii=False)
-    print(f"\n✓ Detailed results saved to: {detailed_file}")
+    print(f"\nDetailed results saved to: {detailed_file}")
     
     # Save summary
     summary_file = os.path.join(output_dir, f"experiment3_summary_{timestamp}.json")
     with open(summary_file, "w", encoding='utf-8') as f:
         json.dump(summary, f, indent=2, ensure_ascii=False)
-    print(f"✓ Summary saved to: {summary_file}")
+    print(f"Summary saved to: {summary_file}")
     
     # Generate LaTeX table
     latex_file = os.path.join(output_dir, f"experiment3_table_{timestamp}.tex")
@@ -284,7 +284,7 @@ def run_experiment_3(output_dir="results"):
         f.write("\\label{tab:exp3_results}\n")
         f.write("\\end{table}\n")
     
-    print(f"✓ LaTeX table saved to: {latex_file}")
+    print(f"LaTeX table saved to: {latex_file}")
     
     # Generate visualization data for plotting
     plot_file = os.path.join(output_dir, f"experiment3_plot_data_{timestamp}.json")
@@ -312,7 +312,7 @@ def run_experiment_3(output_dir="results"):
     
     with open(plot_file, "w") as f:
         json.dump(plot_data, f, indent=2)
-    print(f"✓ LaTeX table saved to: {latex_file}")
+    print(f"LaTeX table saved to: {latex_file}")
     
     print(f"\n{'='*70}")
     print("Analysis Complete")
@@ -342,4 +342,4 @@ if __name__ == "__main__":
         print("  - Machine-native encodings eliminate script-dependent penalties")
         print("  - Non-Latin languages show greater efficiency gains")
     else:
-        print("\n✗ Analysis failed. Please check the error messages above.")
+        print("\nAnalysis failed. Please check the error messages above.")
