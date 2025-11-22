@@ -1,0 +1,131 @@
+[
+  {
+    "language": "english",
+    "character_count": 904,
+    "byte_count": 904,
+    "encodings": {
+      "natural_language": {
+        "token_count": 194,
+        "encoded_char_count": 904,
+        "encoded_byte_count": 904,
+        "chars_per_token": 4.66,
+        "bytes_per_token": 4.66,
+        "encoding_overhead": 1.0,
+        "success": true
+      },
+      "binary": {
+        "token_count": 2756,
+        "encoded_char_count": 8135,
+        "encoded_byte_count": 8135,
+        "chars_per_token": 2.95,
+        "bytes_per_token": 2.95,
+        "encoding_overhead": 9.0,
+        "success": true
+      },
+      "base64": {
+        "token_count": 906,
+        "encoded_char_count": 1208,
+        "encoded_byte_count": 1208,
+        "chars_per_token": 1.33,
+        "bytes_per_token": 1.33,
+        "encoding_overhead": 1.34,
+        "success": true
+      },
+      "compressed_base64": {
+        "token_count": 517,
+        "encoded_char_count": 676,
+        "encoded_byte_count": 676,
+        "chars_per_token": 1.31,
+        "bytes_per_token": 1.31,
+        "encoding_overhead": 0.75,
+        "success": true
+      }
+    }
+  },
+  {
+    "language": "greek",
+    "character_count": 872,
+    "byte_count": 1589,
+    "encodings": {
+      "natural_language": {
+        "token_count": 994,
+        "encoded_char_count": 872,
+        "encoded_byte_count": 1589,
+        "chars_per_token": 0.88,
+        "bytes_per_token": 1.6,
+        "encoding_overhead": 1.0,
+        "success": true
+      },
+      "binary": {
+        "token_count": 3134,
+        "encoded_char_count": 9281,
+        "encoded_byte_count": 9281,
+        "chars_per_token": 2.96,
+        "bytes_per_token": 2.96,
+        "encoding_overhead": 10.64,
+        "success": true
+      },
+      "base64": {
+        "token_count": 1579,
+        "encoded_char_count": 2120,
+        "encoded_byte_count": 2120,
+        "chars_per_token": 1.34,
+        "bytes_per_token": 1.34,
+        "encoding_overhead": 2.43,
+        "success": true
+      },
+      "compressed_base64": {
+        "token_count": 672,
+        "encoded_char_count": 888,
+        "encoded_byte_count": 888,
+        "chars_per_token": 1.32,
+        "bytes_per_token": 1.32,
+        "encoding_overhead": 1.02,
+        "success": true
+      }
+    }
+  },
+  {
+    "language": "chinese",
+    "character_count": 338,
+    "byte_count": 970,
+    "encodings": {
+      "natural_language": {
+        "token_count": 710,
+        "encoded_char_count": 338,
+        "encoded_byte_count": 970,
+        "chars_per_token": 0.48,
+        "bytes_per_token": 1.37,
+        "encoding_overhead": 1.0,
+        "success": true
+      },
+      "binary": {
+        "token_count": 1689,
+        "encoded_char_count": 5297,
+        "encoded_byte_count": 5297,
+        "chars_per_token": 3.14,
+        "bytes_per_token": 3.14,
+        "encoding_overhead": 15.67,
+        "success": true
+      },
+      "base64": {
+        "token_count": 962,
+        "encoded_char_count": 1296,
+        "encoded_byte_count": 1296,
+        "chars_per_token": 1.35,
+        "bytes_per_token": 1.35,
+        "encoding_overhead": 3.83,
+        "success": true
+      },
+      "compressed_base64": {
+        "token_count": 639,
+        "encoded_char_count": 836,
+        "encoded_byte_count": 836,
+        "chars_per_token": 1.31,
+        "bytes_per_token": 1.31,
+        "encoding_overhead": 2.47,
+        "success": true
+      }
+    }
+  }
+]

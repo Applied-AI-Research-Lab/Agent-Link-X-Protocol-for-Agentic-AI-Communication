@@ -1,0 +1,27 @@
+{
+  "languages": [
+    "english",
+    "greek",
+    "chinese"
+  ],
+  "natural_language_tokens": [
+    194,
+    994,
+    710
+  ],
+  "binary_tokens": [
+    2756,
+    3134,
+    1689
+  ],
+  "base64_tokens": [
+    906,
+    1579,
+    962
+  ],
+  "compressed_tokens": [
+    517,
+    672,
+    639
+  ]
+}

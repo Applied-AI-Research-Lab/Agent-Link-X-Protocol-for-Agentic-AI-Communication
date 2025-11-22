@@ -1,0 +1,6 @@
+# Requirements for BitStrings Experiments
+# Install with: pip install -r requirements.txt
+
+openai>=1.0.0
+transformers>=4.30.0
+torch>=2.0.0

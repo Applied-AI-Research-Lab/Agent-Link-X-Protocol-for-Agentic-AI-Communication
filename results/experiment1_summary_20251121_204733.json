@@ -1,0 +1,38 @@
+{
+  "experiment": "Experiment 1 - Human-AI Message Cost Analysis",
+  "timestamp": "20251121_204733",
+  "model": "gpt-4o-mini",
+  "num_messages": 5,
+  "encoding_comparison": {
+    "natural_language": {
+      "avg_latency": 1.539,
+      "avg_input_tokens": 55.6,
+      "avg_total_tokens": 91.2,
+      "success_rate": "5/5"
+    },
+    "binary": {
+      "avg_latency": 1.96,
+      "avg_input_tokens": 827.6,
+      "avg_total_tokens": 895.4,
+      "success_rate": "5/5",
+      "token_change_pct": 881.8,
+      "latency_change_pct": 27.4
+    },
+    "base64": {
+      "avg_latency": 1.778,
+      "avg_input_tokens": 198.6,
+      "avg_total_tokens": 269.8,
+      "success_rate": "5/5",
+      "token_change_pct": 195.8,
+      "latency_change_pct": 15.5
+    },
+    "compressed_base64": {
+      "avg_latency": 1.642,
+      "avg_input_tokens": 172.2,
+      "avg_total_tokens": 220.6,
+      "success_rate": "5/5",
+      "token_change_pct": 141.9,
+      "latency_change_pct": 6.7
+    }
+  }
+}

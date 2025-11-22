@@ -1,0 +1,16 @@
+% Experiment 2 Results Table
+\begin{table}[htbp]
+\centering
+\caption{Experiment 2: Multi-Agent Communication Efficiency}
+\begin{tabular}{lcccc}
+\toprule
+Encoding & Total Tokens & Token Change & Total Latency (s) & Latency Change \\
+\midrule
+Natural Language & 5081 & baseline & 25.676 & baseline \\
+Binary & 26657 & +424.6\% & 23.662 & -7.8\% \\
+Base64 & 6732 & +32.5\% & 15.961 & -37.8\% \\
+Compressed Base64 & 5201 & +2.4\% & 9.954 & -61.2\% \\
+\bottomrule
+\end{tabular}
+\label{tab:exp2_results}
+\end{table}

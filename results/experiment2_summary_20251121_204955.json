@@ -1,0 +1,41 @@
+{
+  "experiment": "Experiment 2 - Multi-Agent Communication",
+  "timestamp": "20251121_204955",
+  "model": "gpt-4o-mini",
+  "encoding_comparison": {
+    "natural_language": {
+      "total_tokens": 5081,
+      "total_latency": 25.676,
+      "total_messages": 8,
+      "avg_tokens_per_message": 635.1,
+      "avg_latency_per_message": 3.209
+    },
+    "binary": {
+      "total_tokens": 26657,
+      "total_latency": 23.662,
+      "total_messages": 8,
+      "avg_tokens_per_message": 3332.1,
+      "avg_latency_per_message": 2.958,
+      "token_change_pct": 424.6,
+      "latency_change_pct": -7.8
+    },
+    "base64": {
+      "total_tokens": 6732,
+      "total_latency": 15.961,
+      "total_messages": 8,
+      "avg_tokens_per_message": 841.5,
+      "avg_latency_per_message": 1.995,
+      "token_change_pct": 32.5,
+      "latency_change_pct": -37.8
+    },
+    "compressed_base64": {
+      "total_tokens": 5201,
+      "total_latency": 9.954,
+      "total_messages": 8,
+      "avg_tokens_per_message": 650.1,
+      "avg_latency_per_message": 1.244,
+      "token_change_pct": 2.4,
+      "latency_change_pct": -61.2
+    }
+  }
+}

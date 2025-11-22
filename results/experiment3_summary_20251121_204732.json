@@ -1,0 +1,75 @@
+{
+  "experiment": "Experiment 3 - Cross-Linguistic Tokenization",
+  "timestamp": "20251121_204732",
+  "tokenizer": "gpt2",
+  "languages_analyzed": [
+    "english",
+    "greek",
+    "chinese"
+  ],
+  "comparative_analysis": {
+    "english": {
+      "natural_language": {
+        "tokens": 194,
+        "chars_per_token": 4.66,
+        "overhead_vs_english": 1.0
+      },
+      "encoding_efficiency": {
+        "binary": {
+          "tokens": 2756,
+          "reduction_vs_nl": -1320.6
+        },
+        "base64": {
+          "tokens": 906,
+          "reduction_vs_nl": -367.0
+        },
+        "compressed_base64": {
+          "tokens": 517,
+          "reduction_vs_nl": -166.5
+        }
+      }
+    },
+    "greek": {
+      "natural_language": {
+        "tokens": 994,
+        "chars_per_token": 0.88,
+        "overhead_vs_english": 5.12
+      },
+      "encoding_efficiency": {
+        "binary": {
+          "tokens": 3134,
+          "reduction_vs_nl": -215.3
+        },
+        "base64": {
+          "tokens": 1579,
+          "reduction_vs_nl": -58.9
+        },
+        "compressed_base64": {
+          "tokens": 672,
+          "reduction_vs_nl": 32.4
+        }
+      }
+    },
+    "chinese": {
+      "natural_language": {
+        "tokens": 710,
+        "chars_per_token": 0.48,
+        "overhead_vs_english": 3.66
+      },
+      "encoding_efficiency": {
+        "binary": {
+          "tokens": 1689,
+          "reduction_vs_nl": -137.9
+        },
+        "base64": {
+          "tokens": 962,
+          "reduction_vs_nl": -35.5
+        },
+        "compressed_base64": {
+          "tokens": 639,
+          "reduction_vs_nl": 10.0
+        }
+      }
+    }
+  }
+}

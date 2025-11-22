@@ -1,0 +1,16 @@
+% Experiment 1 Results Table
+\begin{table}[htbp]
+\centering
+\caption{Experiment 1: Encoding Efficiency Comparison}
+\begin{tabular}{lcccc}
+\toprule
+Encoding & Avg Tokens & Token Change & Avg Latency (s) & Latency Change \\
+\midrule
+Natural Language & 91.2 & baseline & 1.539 & baseline \\
+Binary & 895.4 & +881.8\% & 1.960 & +27.4\% \\
+Base64 & 269.8 & +195.8\% & 1.778 & +15.5\% \\
+Compressed Base64 & 220.6 & +141.9\% & 1.642 & +6.7\% \\
+\bottomrule
+\end{tabular}
+\label{tab:exp1_results}
+\end{table}
